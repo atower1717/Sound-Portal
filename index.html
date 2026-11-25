@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Sound Portal</title>
+<meta property="og:title" content="The Sound Portal">
+<meta property="og:description" content="Revolution from the heart of nature for human expansion">
+<meta property="og:image" content="poster.jpg">
+<style>
+:root{--ink:#ebdfc3;--ink2:#d9c79c;--head:#f1e6c9;--rule:rgba(235,223,195,.35);--accent:#c2d3b4}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:#0a0d10;color:var(--ink);font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;font-size:clamp(18px,1.32vw,34px);line-height:1.55;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:0;background:url(bg.jpg) center/cover no-repeat;filter:brightness(.42) saturate(.85)}
+.bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 45%,rgba(6,9,12,.55),rgba(6,9,12,0) 75%)}
+main{position:relative;z-index:1;max-width:46em;margin:0 auto;padding:4.5em 1.6em 6em}
+.logo{display:block;width:min(19em,72vw);margin:0 0 3em}
+.logo.l{display:none}
+h2{font-weight:600;font-size:1.22em;letter-spacing:.04em;color:var(--head);margin:2.4em 0 .7em}
+h2.c{text-align:center}
+h3{font-weight:400;font-size:1.06em;color:var(--head);margin:1.8em 0 .5em;text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:1px}
+.c{text-align:center}
+p{margin:0 0 .25em}
+.gap{margin-top:1.2em}
+em{color:var(--ink2)}
+.q{font-style:italic;color:var(--accent);margin-top:.6em}
+.rule{border:0;height:1px;background:var(--rule);margin:3.2em auto;width:70%}
+ol{margin:.3em 0 0;padding-left:1.4em}ol li{margin-bottom:.5em}
+.price p{margin:0 0 .15em}
+.mentors{display:grid;grid-template-columns:auto 1fr;gap:0 1.2em;margin-top:1.4em}
+.mentors .lab{color:var(--head)}
+.small{font-size:.92em}
+
+header{position:relative;z-index:1;text-align:center;padding:5.5vh 1.5em 0}
+header img{width:min(42em,88vw);height:auto}
+.wrap{position:relative;z-index:1;max-width:96em;margin:0 auto;padding:4vh 2em 8vh;display:grid;grid-template-columns:minmax(0,30em) minmax(0,46em);gap:5em;justify-content:center;align-items:start}
+.vid{position:sticky;top:4vh;width:min(100%,calc((92vh - 2em)*.75));justify-self:end}
+.vbox{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);border:1px solid rgba(235,223,195,.18);background:#000;aspect-ratio:3/4}
+.vbox video{display:block;width:100%;height:100%;object-fit:cover}
+.play{font:inherit;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,8,10,.25);cursor:pointer;border:0;padding:0;transition:background .3s}
+.play span{width:5.2em;height:5.2em;border-radius:50%;border:1.5px solid rgba(235,223,195,.85);display:flex;align-items:center;justify-content:center;background:rgba(10,13,16,.45);transition:transform .3s,background .3s}
+.play span::after{content:"";margin-left:.35em;border-style:solid;border-width:.9em 0 .9em 1.5em;border-color:transparent transparent transparent #ebdfc3}
+.play:hover{background:rgba(5,8,10,.05)}.play:hover span{transform:scale(1.08);background:rgba(10,13,16,.65)}
+.vcap{text-align:center;font-style:italic;color:var(--ink2);margin-top:.9em;font-size:.92em}
+.doc{padding-top:0}
+.doc>h2:first-child{margin-top:.2em}
+@media (max-width:1100px){.wrap{grid-template-columns:minmax(0,46em);gap:3em}.vid{position:static;max-width:30em;margin:0 auto;width:100%}}
+.ov{position:fixed;inset:0;z-index:50;background:rgba(4,6,8,.94);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.ov.on{opacity:1;visibility:visible}
+.ov video{max-width:96vw;max-height:94vh;height:94vh;width:auto;aspect-ratio:3/4;object-fit:contain;background:#000;border-radius:6px;box-shadow:0 0 80px rgba(0,0,0,.8)}
+.x{position:absolute;top:2.2vh;right:2.2vw;width:2.6em;height:2.6em;border-radius:50%;border:1.5px solid rgba(235,223,195,.75);background:rgba(10,13,16,.6);cursor:pointer;font:inherit;transition:transform .25s,background .25s}
+.x::before,.x::after{content:"";position:absolute;left:50%;top:50%;width:1.2em;height:1.5px;background:#ebdfc3;transform:translate(-50%,-50%) rotate(45deg)}
+.x::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.x:hover{transform:scale(1.1);background:rgba(10,13,16,.85)}
+@media (max-width:700px){.ov video{height:auto;width:100vw;max-height:100vh;border-radius:0}}
+
+.wrapb{position:relative;z-index:1;max-width:100em;margin:0 auto;padding:3vh 3vw 10vh}
+body{line-height:1.7}
+.hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4vw;align-items:center;margin-bottom:6vh}
+.hero .vid{position:static;width:calc((80vh)*.75);justify-self:end}
+.row{display:grid;gap:2.2vw;margin-top:2.2vw}
+.r2{grid-template-columns:1fr 1fr}.r3{grid-template-columns:1fr 1fr 1fr}
+.pan{background:rgba(8,11,14,.48);border:1px solid rgba(235,223,195,.14);border-radius:14px;padding:2.4em 2.6em;backdrop-filter:blur(2px)}
+.pan h2:first-child,.pan h3:first-child{margin-top:0}
+.pan h2{margin-top:1.6em}
+.hero .exp p{margin-bottom:.35em}
+.mentors{grid-template-columns:1fr;gap:.1em}
+@media (max-width:1100px){.hero,.r2,.r3{grid-template-columns:1fr}.hero .vid{width:min(100%,30em);justify-self:center}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header><img src="logo-soundportal.png" alt="the Sound Portal – Revolution from the heart of nature for human expansion"></header>
+<div class="wrapb">
+<section class="hero">
+<div class="vid"><div class="vbox"><img src="poster.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover"><button class="play" id="pb" aria-label="Play the video"><span></span></button></div></div>
+<div class="exp">
+<h2 class="c" style="margin-top:0">Experiences</h2>
+<p class="c">The Sound Portal is designed as a place for unprecedented experience,</p>
+<p class="c">through ‘as yet unheard’ elemental sounds of stone, metal, glass, wood and clay.</p>
+<p class="c">Ears inside our acoustic chambers hear waves equally ricochet</p>
+<p class="c">from all directions for a feeling of vastness</p>
+<p class="c q">“When the sound is everywhere, you’re nowhere”</p>
+<p class="c gap">The Default Mode Network</p>
+<p class="c">(our brain’s system of self-construction)</p>
+<p class="c">may be upended</p>
+<p class="c">Where we lose the self embedded for a time</p>
+<p class="c">Catalyzing curiousness from the place of ‘not knowing’</p>
+</div>
+</section>
+
+<div class="row r2">
+<div class="pan">
+<h2 class="c">Borderless</h2>
+<p>The ‘apparent’ borders between you, others &amp; the world becoming blurry with the nonlinear waves of sound spinning all around. Life frames of reference can be flipped, as with psychedelic experience. <em>Insights arriving from behind the waterfall of thinking.</em></p>
+<h3 class="c">Borderless Air</h3>
+<p class="c">Air recognizes no boundaries, no borders. A single layer enveloping the earth.</p>
+<p class="c">Every breath of yours then, in a visceral way, reflects the borderless One.</p>
+<h2>Simply</h2>
+<p>You’ll have unprecedented experiences, which have potential to translate to new life openings</p>
+</div>
+<div class="pan">
+<h2 class="c">Environment &amp; Colloquy</h2>
+<p class="c">The term ‘environment’ normally refers to nature, culture, or work. Here it refers to a combination of parameters (directionless acoustic sound &amp; Li harmony, rhythm and visuals) that together create something new for your sensory system to play with.</p>
+<p class="c gap"><strong>After each of the three experiences there will be a mini Colloquy if appropriate</strong></p>
+<p class="c">(below the surface conversation)</p>
+<p class="c"><strong>At the end a longer exchange</strong></p>
+</div>
+</div>
+
+<div class="row r3">
+<div class="pan">
+<h2>Registration</h2>
+<ol>
+<li>Sessions are for <strong>1, 2 or 3</strong> at a time</li>
+<li>Register for a first session <em>(three environments)</em> of approx. 2 hours, starting at 7pm on a Wed or Sunday evening. Other days are possible with notice. Based on that experience the group may decide to explore the six other vibrational environments session 2 and 3 offer.</li>
+</ol>
+</div>
+<div class="pan">
+<h3>Practices</h3>
+<p>No shoes or bare feet in the Portal.</p>
+<p>Wear loose fresh clean clothes – no belts, buckles or loose jewelry for safety.</p>
+</div>
+<div class="pan">
+<h3>Introductory Cost</h3>
+<p><strong>Session for 1 - $350</strong></p>
+<p><strong>Session for 2 - $350</strong></p>
+<p><strong>Session for 3 - $500</strong></p>
+<p class="gap"><strong>Payment:</strong></p>
+<p>Zelle or Paypal Friends both alan@SoundforLife.fun</p>
+</div>
+</div>
+
+<div class="row r2">
+<div class="pan">
+<h2>SOUND PORTAL Guides</h2>
+<p>Alan Tower – Lead designer</p>
+<p>Joe Berry – musician, composer, soundworker</p>
+<p>Amber Linder – soundworker, musician, chef</p>
+<p class="gap">The Sound Portal design has developed over the past eight years with many collaborators. In a previous career as a performing musician, Alan created around 15 albums of original music, some involving the acoustic instruments of the Sound Portal. These are available gratis in a private link to anyone who participates in a session or three.</p>
+</div>
+<div class="pan">
+<h2>Tower Mentors</h2>
+<p>W. A. Mathieu - teacher, author of Harmonic Experience</p>
+<p>Mark Deutsch - inventor of the Bazantar</p>
+<p>Jamie Hopkins MD - Soundworker, bodywork</p>
+<p>Rupert Spira - teacher, author of Being Aware of Being Aware</p>
+<p>Orlando Villarraga - musician</p>
+<p>The Resonance Group - 501c3 social profit</p>
+<p class="gap"><em>Mission: elevating the human spirit by connecting to sound as a force of nature</em></p>
+</div>
+</div>
+</div>
+<div class="ov" id="ov" aria-hidden="true">
+<video id="v" src="sound-portal.mp4" poster="poster.jpg" playsinline controls preload="none"></video>
+<button class="x" id="x" aria-label="Close video"></button>
+</div>
+<script>
+var ov=document.getElementById('ov'),v=document.getElementById('v');
+function openV(){ov.classList.add('on');document.body.style.overflow='hidden';try{v.currentTime=0}catch(e){}v.play();}
+function closeV(){v.pause();ov.classList.remove('on');document.body.style.overflow='';}
+document.getElementById('pb').addEventListener('click',openV);
+document.getElementById('x').addEventListener('click',closeV);
+ov.addEventListener('click',function(e){if(e.target===ov)closeV();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ov.classList.contains('on'))closeV();});
+v.addEventListener('ended',closeV);
+</script>
+</body>
+</html>
